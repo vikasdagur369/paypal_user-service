@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users/")
+@RequestMapping("/api/users")
 public class UserController {
     private UserService userService;
 
@@ -27,7 +27,7 @@ public class UserController {
 
     @GetMapping("/all")
     public ResponseEntity<User> getAllUser(){
-        return ResponseEntity.ok((User) userService.getAllUsers())
+        return ResponseEntity.ok((User) userService.getAllUsers());
     }
 
 }
